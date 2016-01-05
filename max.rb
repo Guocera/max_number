@@ -1,6 +1,8 @@
 # Find the maximum 
 def maximum(arr)
-  arr.max
+  arr.inject() do |result,element| 
+    result < element ? max = element : max = result
+  end
 end
 
 # expect it to return 42 below
